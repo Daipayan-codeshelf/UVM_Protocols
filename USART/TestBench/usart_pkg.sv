@@ -1,0 +1,50 @@
+`ifndef USART_PKG_SV
+`define USART_PKG_SV
+
+package usart_pkg;
+
+   import uvm_pkg::*;
+   `include "uvm_macros.svh"
+
+   //////////////////////////////////////
+   // Transactions
+   //////////////////////////////////////
+
+   `include "apb_seq_item.sv"
+
+   //////////////////////////////////////
+   // APB Agent
+   //////////////////////////////////////
+
+   `include "apb_sequencer.sv"
+   `include "apb_driver.sv"
+   `include "apb_monitor.sv"
+   `include "apb_agent.sv"
+
+
+
+   `include "usart_seq_item.sv"
+   `include "usart_monitor.sv"
+   `include "usart_agent.sv"
+
+   //////////////////////////////////////
+   // Environment
+   //////////////////////////////////////
+
+   `include "env.sv"
+
+   //////////////////////////////////////
+   // Sequences
+   //////////////////////////////////////
+
+   `include "sequences.sv"
+
+   //////////////////////////////////////
+   // Tests
+   //////////////////////////////////////
+
+   `include "test.sv"
+
+endpackage
+
+`endif
